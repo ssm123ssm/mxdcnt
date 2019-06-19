@@ -8,5 +8,5 @@ app.listen(process.env.PORT || port, function () {
 });
 
 app.get('/', function (req, res) {
-    res.send('WORKS');
+    res.send('Still?');
 });
