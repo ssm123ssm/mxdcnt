@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 app.post('/post', function (req, res) {
     var url = req.body.url;
     var data = req.body;
-    console.log(url, data);
+    console.log("POST REQUEST TO: " + url);
     axios.post(url, data).then(function (response) {
         console.log(response.data);
         res.send(response.data);
@@ -36,13 +36,17 @@ app.post('/post', function (req, res) {
 });
 
 app.get('/get', function (req, res) {
-    var url = req.params.url;
-    console.log(url);
-    axios.get(url).then(function (response) {
+    var url = req.query.url;
+    var params = req.query;
+    //params.delete['url'];
+    console.log('Getting the Address...');
+    axios.get(url, {
+        params: params
+    }).then(function (response) {
         console.log(response.data);
         res.send(response.data);
     }).catch(function (error) {
-        console.log(error);
+        console.log('error');
         res.send('error');
     })
 });
