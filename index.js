@@ -46,6 +46,7 @@ app.get('/get', function (req, res) {
     }
     if (ext == 'js') {
         res.type('text/javascript');
+        console.log('fd');
     }
     if (ext == 'jpg' || ext == 'jpeg' || ext == 'png') {
         axios({
