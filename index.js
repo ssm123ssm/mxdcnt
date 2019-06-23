@@ -36,7 +36,13 @@ app.post('/post', function (req, res) {
 });
 
 app.get('/get', function (req, res) {
+
     var url = req.query.url;
+    var ext = url.split('.')[url.split('.').length - 1];
+    console.log(ext);
+    if (ext == 'css') {
+        res.type('text/css');
+    }
     var params = req.query;
     //params.delete['url'];
     console.log('Getting the Address...');
