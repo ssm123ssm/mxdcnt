@@ -1,5 +1,7 @@
 # Have you ever come across the problem of calling non-secure resources from secure servers?
 
+[![Join the chat at https://gitter.im/mxdcnt/community](https://badges.gitter.im/mxdcnt/community.svg)](https://gitter.im/mxdcnt/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 For example 
 - loading your own resources in **github pages**...
 - Calling non secure web API endpoints from **Codepen**...
